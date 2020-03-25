@@ -5,6 +5,8 @@
     <url>/posts/20191217a2.html</url>
     <content><![CDATA[<h2 id="一、nginx日志管理"><a href="#一、nginx日志管理" class="headerlink" title="一、nginx日志管理"></a>一、nginx日志管理</h2><p>Nginx访问日志主要有两个参数控制</p>
 <p>1) log_format #用来定义记录日志的格式（可以定义多种日志格式，取不不同名字即可）<br>log_format log_name string<br>2) access_log #用来指定日至文件的路路径及使用的何种日志格式记录日志<br>access_log logs/access.log main;</p>
+<a id="more"></a>
+
 <h3 id="log-format格式变量含义："><a href="#log-format格式变量含义：" class="headerlink" title="log_format格式变量含义："></a>log_format格式变量含义：</h3><table>
 <thead>
 <tr>
@@ -206,11 +208,13 @@
       </tags>
   </entry>
   <entry>
-    <title>nginx之旅第一篇：nginx下载安装、nginx配置文件详解、nginx默认网站</title>
+    <title>nginx之旅(第一篇)：nginx下载安装、nginx配置文件详解、nginx默认网站</title>
     <url>/posts/20191216a1.html</url>
     <content><![CDATA[<h2 id="一、nginx下载安装"><a href="#一、nginx下载安装" class="headerlink" title="一、nginx下载安装"></a>一、nginx下载安装</h2><p>版本nginx 1.15.5</p>
 <p>系统环境centos7.5（本机ip192.168.199.228）</p>
 <p>关闭selinux 和防火墙firewall</p>
+<a id="more"></a>
+
 <h3 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h3><p>wget <a href="http://nginx.org/download/nginx-1.15.5.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.15.5.tar.gz</a> -P /usr/src</p>
 <h3 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h3><p>安装大概过程</p>
 <p>配置—编译—安装</p>
