@@ -20,29 +20,34 @@
     var CONFIG = {"hostname":"yoursite","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="学习随笔 与君分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Nicholas--Altshuler">
-<meta property="og:url" content="http://yoursite/index.html">
+  <meta name="description" content="一、nginx下载安装版本nginx 1.15.5 系统环境centos7.5（本机ip192.168.199.228） 关闭selinux 和防火墙firewall 1、下载wget http:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;nginx-1.15.5.tar.gz -P &#x2F;usr&#x2F;src 2、安装安装大概过程 配置—编译—安装 配置1）检查环境 是否 满足安装条件 依赖解决2）指定安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx之旅第一篇：nginx下载安装、nginx配置文件详解、nginx默认网站">
+<meta property="og:url" content="http://yoursite/posts/20191216a1.html">
 <meta property="og:site_name" content="Nicholas--Altshuler">
-<meta property="og:description" content="学习随笔 与君分享">
+<meta property="og:description" content="一、nginx下载安装版本nginx 1.15.5 系统环境centos7.5（本机ip192.168.199.228） 关闭selinux 和防火墙firewall 1、下载wget http:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;nginx-1.15.5.tar.gz -P &#x2F;usr&#x2F;src 2、安装安装大概过程 配置—编译—安装 配置1）检查环境 是否 满足安装条件 依赖解决2）指定安装">
+<meta property="og:image" content="http://yoursite/posts/20191216a1/nginx%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.png">
+<meta property="article:published_time" content="2019-12-16T03:07:17.000Z">
+<meta property="article:modified_time" content="2020-03-25T15:52:58.289Z">
 <meta property="article:author" content="nocholas--">
+<meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite/posts/20191216a1/nginx%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81.png">
 
-<link rel="canonical" href="http://yoursite/">
+<link rel="canonical" href="http://yoursite/posts/20191216a1.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Nicholas--Altshuler</title>
+  <title>nginx之旅第一篇：nginx下载安装、nginx配置文件详解、nginx默认网站 | Nicholas--Altshuler</title>
   
 
 
@@ -181,316 +186,11 @@
         <div class="content-wrap">
           
 
-          <div class="content index">
+          <div class="content post">
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite/posts/20191217a2.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nocholas--">
-      <meta itemprop="description" content="学习随笔 与君分享">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nicholas--Altshuler">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/20191217a2.html" class="post-title-link" itemprop="url">nginx之旅(第二篇):nginx日志管理、nginx防盗链、nginx虚拟主机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-17 23:46:14" itemprop="dateCreated datePublished" datetime="2019-12-17T23:46:14+08:00">2019-12-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/posts/20191217a2.html" class="post-meta-item leancloud_visitors" data-flag-title="nginx之旅(第二篇):nginx日志管理、nginx防盗链、nginx虚拟主机" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/posts/20191217a2.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/20191217a2.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-          <div><span class="post-time">
- 
-           <span class="post-meta-item-icon">
-             <i class="fa fa-file-word-o"></i>
-           </span>
-           <span class="post-meta-item-text">本文字数:</span>
-           <span class="post-count">3.8k(字)</span>
-           
-        </span>
-    
-        <span class="post-time">
-            &nbsp; | &nbsp;
-           <span class="post-meta-item-icon">
-             <i class="fa fa-clock-o"></i>
-           </span>
-           <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count"> ≈ 19 (分)</span>
-           
-        </span>
-        </p>
-
-        </div>
-
-      </header>
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h2 id="一、nginx日志管理"><a href="#一、nginx日志管理" class="headerlink" title="一、nginx日志管理"></a>一、nginx日志管理</h2><p>Nginx访问日志主要有两个参数控制</p>
-<p>1) log_format #用来定义记录日志的格式（可以定义多种日志格式，取不不同名字即可）<br>log_format log_name string<br>2) access_log #用来指定日至文件的路路径及使用的何种日志格式记录日志<br>access_log logs/access.log main;</p>
-<h3 id="log-format格式变量含义："><a href="#log-format格式变量含义：" class="headerlink" title="log_format格式变量含义："></a>log_format格式变量含义：</h3><table>
-<thead>
-<tr>
-<th align="left">字段</th>
-<th align="left">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">remote_addr</td>
-<td align="left">客户端地址</td>
-</tr>
-<tr>
-<td align="left">remote_user</td>
-<td align="left">客户端用户名</td>
-</tr>
-<tr>
-<td align="left">time_local</td>
-<td align="left">服务器时间</td>
-</tr>
-<tr>
-<td align="left">request</td>
-<td align="left">请求内容，包括方法名、地址和http协议</td>
-</tr>
-<tr>
-<td align="left">http_host</td>
-<td align="left">用户请求时使用的http地址</td>
-</tr>
-<tr>
-<td align="left">status</td>
-<td align="left">返回的http状态码</td>
-</tr>
-<tr>
-<td align="left">request_length</td>
-<td align="left">请求大小</td>
-</tr>
-<tr>
-<td align="left">body_bytes_sent</td>
-<td align="left">返回的大小</td>
-</tr>
-<tr>
-<td align="left">http_referer</td>
-<td align="left">来源页</td>
-</tr>
-<tr>
-<td align="left">http_user_agent</td>
-<td align="left">客户端名称</td>
-</tr>
-<tr>
-<td align="left">request_time</td>
-<td align="left">整体请求延时</td>
-</tr>
-<tr>
-<td align="left">upstream_response_time</td>
-<td align="left">上游服务的处理延时</td>
-</tr>
-</tbody></table>
-<p>$remote_addr #记录访问网站的客户端地址<br>$remote_user #远程客户端用户名<br>$time_local #记录访问时间与时区<br>$request #用户的http请求起始行行信息<br>$status #http状态码，记录请求返回的状态码，例例如：200、301、404等<br>$body_bytes_sent #服务器器发送给客户端的响应body字节数<br>$http_referer #记录此次请求是从哪个连接访问过来的，可以根据该参数进行行防盗链设置。<br>$http_user_agent #记录客户端访问信息，例例如：浏览器器、手机客户端等<br>$http_x_forwarded_for #当前端有代理理服务器器时，设置web节点记录客户端地址的配置，此参数生效的前提是代理理服务器器也要进行行相关的x_forwarded_for设置</p>
-<h3 id="自定义设置日志"><a href="#自定义设置日志" class="headerlink" title="自定义设置日志"></a>自定义设置日志</h3><p>在配置文件里设置格式，应用格式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost html]# pwd</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html</span><br><span class="line">[root@localhost html]# vi ..&#x2F;conf&#x2F;nginx.conf</span><br><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main  &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;</span><br><span class="line">    #                  &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;</span><br><span class="line">    #                  &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line">    </span><br><span class="line">    #自定义日志第一步自己设置日志的格式</span><br><span class="line">	log_format  mylogs &#39;[$time_local]--$remote_addr -&quot;$request&quot;-$status&#39;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">		listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line">        charset utf-8;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line">        #自定义日志第二步，应用日志格式</span><br><span class="line">        access_log  logs&#x2F;host.access.log  mylogs;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;；</span><br><span class="line">        #location &#x2F; 这里的&#x2F;代表网站的根目录</span><br><span class="line">        </span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>使用tailf 在/usr/local/nginx/logs/host.access.log跟踪日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;logs&#x2F;</span><br><span class="line">[root@localhost logs]# ls</span><br><span class="line">access.log  error.log  host.access.log  nginx.pid</span><br><span class="line">[root@localhost logs]# tailf host.access.log</span><br><span class="line">[14&#x2F;Dec&#x2F;2019:20:09:39 +0800]--192.168.199.168 -&quot;GET &#x2F;b&#x2F; HTTP&#x2F;1.1&quot;-304</span><br></pre></td></tr></table></figure>
-
-
-
-<p>用例二，自定义json格式的日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost html]# pwd</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html</span><br><span class="line">[root@localhost html]# vi ..&#x2F;conf&#x2F;nginx.conf</span><br><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main  &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;</span><br><span class="line">    #                  &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;</span><br><span class="line">    #                  &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line">    </span><br><span class="line">    #自定义日志第一步自己设置日志的格式</span><br><span class="line">	log_format main_json &#39;&#123;&quot;@timestamp&quot;:&quot;$time_local&quot;,&#39;</span><br><span class="line">    &#39;&quot;client_ip&quot;: &quot;$remote_addr&quot;,&#39;</span><br><span class="line">    &#39;&quot;request&quot;: &quot;$request&quot;,&#39;</span><br><span class="line">    &#39;&quot;status&quot;: &quot;$status&quot;,&#39;</span><br><span class="line">    &#39;&quot;bytes&quot;: &quot;$body_bytes_sent&quot;,&#39;</span><br><span class="line">    &#39;&quot;x_forwarded&quot;: &quot;$http_x_forwarded_for&quot;,&#39;</span><br><span class="line">    &#39;&quot;referer&quot;: &quot;$http_referer&quot;,&#39;</span><br><span class="line">    &#39;&#125;&#39;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">    #access_log  logs&#x2F;access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">		listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line">        charset utf-8;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line">        #自定义日志第二步，应用日志格式</span><br><span class="line">        access_log logs&#x2F;access_json.log main_json;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;；</span><br><span class="line">        #location &#x2F; 这里的&#x2F;代表网站的根目录</span><br><span class="line">        </span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、防盗链"><a href="#二、防盗链" class="headerlink" title="二、防盗链"></a>二、防盗链</h2><p>创建环境</p>
-<p>VM –web02的ip地址是192.168.199.229</p>
-<p>安装nginx，创建spider,将index.html写入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# cd html&#x2F;</span><br><span class="line">[root@localhost html]# ls</span><br><span class="line">50x.html  index.html</span><br><span class="line">[root@localhost html]# mkdir spider</span><br><span class="line"></span><br><span class="line">[root@localhost html]# vi spider&#x2F;index.html </span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;fang dao lian ce shi&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;font size&#x3D;&quot;5&quot;&gt;</span><br><span class="line">&lt;a href&#x3D;&quot;http:&#x2F;&#x2F;192.168.199.228&#x2F;c&#x2F;0.png&quot;&gt;dao lian&lt;&#x2F;a&gt;</span><br><span class="line">&lt;br&gt;&lt;&#x2F;br&gt;</span><br><span class="line">&lt;&#x2F;font&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">~                                                                             </span><br><span class="line">~                                                                             </span><br><span class="line">~</span><br></pre></td></tr></table></figure>
-
-<p>VM-web01的ip是192.168.199.228</p>
-<p>将0.png放入/usr/local/nginx/html/c</p>
-<p>效果</p>
-<img src="/posts/20191217a2/%E7%9B%97%E9%93%BE1.gif" class="" title="盗链">
-
-
-
-<p>在VM-web01设置防盗链</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost html]# pwd</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html</span><br><span class="line">[root@localhost html]# vi ..&#x2F;conf&#x2F;nginx.conf</span><br><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">		listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line">        charset utf-8;</span><br><span class="line"></span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;；</span><br><span class="line">        #location &#x2F; 这里的&#x2F;代表网站的根目录</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">		#针对c文件夹进行设置进行防盗链;</span><br><span class="line">        location &#x2F;c &#123;</span><br><span class="line">                valid_referers none blocked *.test.com;</span><br><span class="line">                if ($invalid_referer) &#123;</span><br><span class="line">                        return 403;</span><br><span class="line">                        &#125;</span><br><span class="line">                 &#125;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>valid_referers none blocked *.test.com; </p>
-<p>表示要么没有Referrer要么Referrer:blocked(走的是硬件防火墙)要么Referrer: 属于*.test.com这个域名</p>
-<p>针对全站设置图片防盗链</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~* \.(png|gif|bmp)$ &#123;</span><br><span class="line">	valid_referers none blocked *.test.com; </span><br><span class="line">	if ($invalid_referer) &#123;</span><br><span class="line">		return 403;</span><br><span class="line"> 		&#125;</span><br><span class="line"> 		 &#125;</span><br></pre></td></tr></table></figure>
-
-<p>效果</p>
-<img src="/posts/20191217a2/%E9%98%B2%E7%9B%97%E9%93%BE.gif" class="" title="防盗链">
-
-
-
-<h2 id="三、虚拟主机"><a href="#三、虚拟主机" class="headerlink" title="三、虚拟主机"></a>三、虚拟主机</h2><h3 id="虚拟主机的概念"><a href="#虚拟主机的概念" class="headerlink" title="虚拟主机的概念"></a><strong>虚拟主机的概念</strong></h3><p>如果你有两个不同域名的网站，但是你只有一台服务器，这时候怎么办？其实利用nginx或者apache都可以帮你用一台机器来模拟多台机器作为服务器提供服务。</p>
-<p>一个web服务器器软件默认情况下只能发布一个web,因为一个web分享出去需要三个条件(IP、Port、Domain name)。</p>
-<p>虚拟主机，就是把一台物理服务器划分成多个“虚拟”的服务器，每一个虚拟主机都可以有独立的域名和独立的目录</p>
-<p>，在web服务里就是一个独立的网站站点，这个站点对应独立的域名（也可能是IP或端口），具有独立的程序及资源目录，可以独立地对外提供服务供用户访问。</p>
-<p>​    这个这个独立的站点在配置里是由一定格式的标签段标记，对于apache软件来说，一个虚拟主机的标签段通畅被包含在<VirtualHost></VirtualHost>内，而nginx软件则使用一个server{}标签来标示一个虚拟主机，一个web服务里可以有多个虚拟主机主机标签对，即同时可以支持多个虚拟主机站点。</p>
-<p>通过 Nginx 可以实现虚拟主机的配置，Nginx 支持三种类型的虚拟主机配置</p>
-<ul>
-<li>基于 IP 的虚拟主机</li>
-<li>基于端口的虚拟主机</li>
-<li>基于域名的虚拟主机</li>
-</ul>
-<h3 id="Nginx-配置文件的结构"><a href="#Nginx-配置文件的结构" class="headerlink" title="Nginx 配置文件的结构"></a>Nginx 配置文件的结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ...</span></span><br><span class="line">events &#123;</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    server&#123;</span><br><span class="line">        <span class="comment"># ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    server&#123;</span><br><span class="line">        <span class="comment"># ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注：每个 server 就是一个虚拟主机</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="1、基于IP的虚拟主机"><a href="#1、基于IP的虚拟主机" class="headerlink" title="1、基于IP的虚拟主机"></a>1、基于IP的虚拟主机</h3><p>基于IP的虚拟主机，意思就是通过不同的IP区分不同的虚拟主机，</p>
-<p>Linux 操作系统允许添加 IP 别名，IP 别名就是在一块物理网卡上绑定多个 lP 地址。这样就能够在使用单一网卡的同一个服务器上运行多个基于 IP 的虚拟主机。</p>
-<p><strong>需求</strong></p>
-<p>本机原有ip192.168.199.228</p>
-<ul>
-<li>一台 Nginx 服务器绑定两个 IP：192.168.199.228、192.168.199.128</li>
-<li>访问不同的 IP 请求不同的 HTML 目录，即： <ul>
-<li>访问 <code>http://192.168.199.228</code> 将访问 <code>a</code> 目录下的 html 网页</li>
-<li>访问 <code>http://192.168.199.128</code> 将访问 <code>b</code> 目录下的 html 网页</li>
-</ul>
-</li>
-</ul>
-<p><strong>增加辅助ip的方法</strong></p>
-<p>1.1 临时性增加辅助ip：</p>
-<p>方法一：ifconfig ens33:1 192.168.199.128/24 up</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ifconfig</span><br><span class="line">ens33: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.228  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        inet6 fe80::3f62:e00a:ee97:b24d  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::2ab:8d0e:862a:fdf0  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::8d2:921f:c09f:8c97  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 00:0c:29:7b:9b:18  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 57932  bytes 8672597 (8.2 MiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 18482  bytes 1963395 (1.8 MiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">lo: flags&#x3D;73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 232  bytes 27329 (26.6 KiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 232  bytes 27329 (26.6 KiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# ifconfig ens33:1 192.168.199.128&#x2F;24 up  #创建子ip128</span><br><span class="line">[root@localhost ~]# ifconfig</span><br><span class="line">ens33: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.228  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        inet6 fe80::3f62:e00a:ee97:b24d  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::2ab:8d0e:862a:fdf0  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::8d2:921f:c09f:8c97  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 00:0c:29:7b:9b:18  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 58773  bytes 8728263 (8.3 MiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 18554  bytes 1971175 (1.8 MiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">ens33:1: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.128  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        ether 00:0c:29:7b:9b:18  txqueuelen 1000  (Ethernet)</span><br><span class="line"></span><br><span class="line">lo: flags&#x3D;73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 232  bytes 27329 (26.6 KiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 232  bytes 27329 (26.6 KiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
-
-
-
-<p>方法二：ip addr</p>
-<p>ip addr add 192.168.199.130/24 dev ens33（使用ip addr能查看）</p>
-<p>ip addr add 192.168.199.130/24 label ens33:2 dev ens33（使用ifconfig和ipaddr都能查看，推荐使用）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# ip addr add 192.168.199.130&#x2F;24 label ens33:2 dev ens33</span><br><span class="line">[root@localhost ~]# ifconfig</span><br><span class="line">ens33: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.229  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        inet6 fe80::6fd6:65fd:b960:af14  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::5a0a:f713:1cae:b91b  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::292a:bee0:12:74fa  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 00:0c:29:08:ee:cd  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 10777  bytes 1765191 (1.6 MiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 2835  bytes 267788 (261.5 KiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">ens33:2: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.130  netmask 255.255.255.0  broadcast 0.0.0.0</span><br><span class="line">        ether 00:0c:29:08:ee:cd  txqueuelen 1000  (Ethernet)</span><br><span class="line"></span><br><span class="line">lo: flags&#x3D;73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 4  bytes 352 (352.0 B)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 4  bytes 352 (352.0 B)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
-
-<p>1.2永久增加辅助ip</p>
-<p>cd /etc/sysconfig/network-scripts/    #进入到网卡配置文件的目录</p>
-<p>cp ifcfg-ens33 ifcfg-ens33:1                #拷贝配置文件并重命名</p>
-<p>vi ifcfg-ens33:1                        #编辑配置文件</p>
-<p>/etc/init.d/network restart            #重启网络服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost network-scripts]# vi ifcfg-ens33:1</span><br><span class="line">TYPE&#x3D;&quot;Ethernet&quot;</span><br><span class="line">PROXY_METHOD&#x3D;&quot;none&quot;</span><br><span class="line">BROWSER_ONLY&#x3D;&quot;no&quot;</span><br><span class="line">BOOTPROTO&#x3D;&quot;dhcp&quot;</span><br><span class="line">DEFROUTE&#x3D;&quot;yes&quot;</span><br><span class="line">IPV4_FAILURE_FATAL&#x3D;&quot;no&quot;</span><br><span class="line">IPV6INIT&#x3D;&quot;yes&quot;</span><br><span class="line">IPV6_AUTOCONF&#x3D;&quot;yes&quot;</span><br><span class="line">IPV6_DEFROUTE&#x3D;&quot;yes&quot;</span><br><span class="line">IPV6_FAILURE_FATAL&#x3D;&quot;no&quot;</span><br><span class="line">IPV6_ADDR_GEN_MODE&#x3D;&quot;stable-privacy&quot;</span><br><span class="line">NAME&#x3D;&quot;ens33:1&quot; #修改</span><br><span class="line">UUID&#x3D;&quot;42820e51-d7c9-49e3-a0ec-7f1b09f797c5&quot;</span><br><span class="line">DEVICE&#x3D;&quot;ens33：1&quot; #修改</span><br><span class="line">ONBOOT&#x3D;&quot;yes&quot;</span><br><span class="line">IPADDR&#x3D;&quot;192.168.199.128&quot;  #增加</span><br><span class="line">NETMASK&#x3D;&quot;255.255.255.0&quot; #增加</span><br><span class="line"></span><br><span class="line">[root@localhost network-scripts]# &#x2F;etc&#x2F;init.d&#x2F;network restart </span><br><span class="line">Restarting network (via systemctl):                        [  OK  ]</span><br><span class="line">[root@localhost network-scripts]# ifconfig</span><br><span class="line">ens33: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.228  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        inet6 fe80::3f62:e00a:ee97:b24d  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::2ab:8d0e:862a:fdf0  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        inet6 fe80::8d2:921f:c09f:8c97  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 00:0c:29:7b:9b:18  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 61195  bytes 9081544 (8.6 MiB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 19449  bytes 2067061 (1.9 MiB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"></span><br><span class="line">ens33:1: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.128  netmask 255.255.255.0  broadcast 192.168.199.255</span><br><span class="line">        ether 00:0c:29:7b:9b:18  txqueuelen 1000  (Ethernet)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>创建目录及文件</strong></p>
-<p>在 <code>/usr/local/nginx/html</code> 目录下创建 a 和 b两个目录，并分辨创建两个 index.html 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost html]# mkdir a b </span><br><span class="line">[root@localhost html]# ls</span><br><span class="line">50x.html  a  b  c  index.html</span><br><span class="line">[root@localhost html]# echo aaa &gt;a&#x2F;index.html</span><br><span class="line">[root@localhost html]# echo bbb &gt;b&#x2F;index.html</span><br></pre></td></tr></table></figure>
-
-<p><strong>配置虚拟主机</strong></p>
-<p>修改 <code>/usr/local/nginx</code> 目录下的 nginx.conf 配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">    # 配置虚拟主机 192.168.199.228</span><br><span class="line">    server &#123;</span><br><span class="line">    # 监听的ip和端口，配置 192.168.199.228:80</span><br><span class="line">        listen       192.168.199.228:80;</span><br><span class="line">    # 所有的请求都以&#x2F;开始，所有的请求都可以匹配此 location</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">        # 使用 root 指令指定虚拟主机目录即网页存放目录</span><br><span class="line">        # 比如访问 http:&#x2F;&#x2F;ip&#x2F;index.html 将找到&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html&#x2F;a&#x2F;index.html</span><br><span class="line">        # 比如访问 http:&#x2F;&#x2F;ip&#x2F;item&#x2F;index.html 将找到 &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html&#x2F;a&#x2F;item&#x2F;index.html</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html&#x2F;a;</span><br><span class="line">        # 指定欢迎页面，按从左到右顺序查找</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    # 配置虚拟主机 192.168.199.128</span><br><span class="line">    server &#123;</span><br><span class="line">        listen      192.168.199.128:80;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html&#x2F;b;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>重启nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost html]# killall nginx</span><br><span class="line">[root@localhost html]# lsof -i :80</span><br><span class="line">[root@localhost html]# ..&#x2F;sbin&#x2F;nginx</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2、基于端口的虚拟主机配置"><a href="#2、基于端口的虚拟主机配置" class="headerlink" title="2、基于端口的虚拟主机配置"></a>2、基于端口的虚拟主机配置</h3><p><strong>需求</strong></p>
-<ul>
-<li>Nginx 对外提供 80 和 8080 两个端口监听服务</li>
-<li>请求 80 端口则请求 html80 目录下的 html</li>
-<li>请求 8080 端口则请求 html8080 目录下的 html</li>
-</ul>
-<p><strong>创建目录及文件</strong></p>
-<p>在 <code>/usr/local/nginx/html</code> 目录下创建 <code>html80</code> 和 <code>html8080</code> 两个目录，并分辨创建两个 index.html 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# pwd</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;nginx</span><br><span class="line">[root@localhost nginx]# mkdir html80 html8080</span><br><span class="line">[root@localhost nginx]# echo 80html网页 &gt;html80&#x2F;index.html</span><br><span class="line">[root@localhost nginx]# echo 8080html网页 &gt;html8080&#x2F;index.html</span><br><span class="line">[root@localhost nginx]# cat html80&#x2F;index.html </span><br><span class="line">80html网页</span><br></pre></td></tr></table></figure>
-
-<p><strong>配置虚拟主机</strong></p>
-<p>修改 <code>/usr/local/nginx</code> 目录下的 nginx.conf 配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">    # 配置虚拟主机 192.168.199.228</span><br><span class="line">    server &#123;</span><br><span class="line">        listen     80;</span><br><span class="line">    # 所有的请求都以&#x2F;开始，所有的请求都可以匹配此 location</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html80;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen      8080;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;html8080&#x2F;;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、基于域名的虚拟主机配置"><a href="#3、基于域名的虚拟主机配置" class="headerlink" title="3、基于域名的虚拟主机配置"></a>3、基于域名的虚拟主机配置</h3><p><strong>需求</strong></p>
-<ul>
-<li>两个域名指向同一台 Nginx 服务器，用户访问不同的域名显示不同的网页内容</li>
-<li>两个域名是 admin.abc.com 和 service.abc.com</li>
-<li>Nginx 服务器使用虚拟机 192.168.199.228</li>
-</ul>
-<p><strong>配置Hosts 文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# vi &#x2F;etc&#x2F;hosts</span><br><span class="line">127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1         localhost localhost.localdomain localhost6 localhost6.localdomain6</span><br><span class="line">192.168.199.228 admin.abc.com</span><br><span class="line">192.168.199.228 service.abc.com</span><br></pre></td></tr></table></figure>
-
-<p><strong>创建目录及文件</strong></p>
-<p>在 <code>/usr/local/nginx/html</code> 目录下创建 <code>htmladmin</code> 和 <code>htmlservice</code> 两个目录，并分辨创建两个 index.html 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# mkdir htmladmin htmlservice</span><br><span class="line">[root@localhost nginx]# echo htmladmin &gt;htmladmin&#x2F;index.html</span><br><span class="line">[root@localhost nginx]# echo htmlservice &gt;htmlservice&#x2F;index.html</span><br><span class="line">[root@localhost nginx]# cat htmladmin&#x2F;index.html </span><br><span class="line">htmladmin</span><br><span class="line">[root@localhost nginx]# cat htmlservice&#x2F;index.html </span><br><span class="line">htmlservice</span><br><span class="line">[root@localhost nginx]#</span><br></pre></td></tr></table></figure>
-
-<p><strong>配置虚拟主机</strong></p>
-<p>修改 <code>/usr/local/nginx</code> 目录下的 nginx.conf 配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">http&#123;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">    # 配置虚拟主机 192.168.199.228</span><br><span class="line">    server &#123;</span><br><span class="line">        listen     80;</span><br><span class="line">        server_name admin.abc.com;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;htmladmin;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen      80;</span><br><span class="line">        server_name service.abc.com;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;htmlservice&#x2F;;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">      </span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>重启nginx</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# sbin&#x2F;nginx -t</span><br><span class="line">nginx: the configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf test is successful</span><br><span class="line">[root@localhost nginx]# killall nginx</span><br><span class="line">[root@localhost nginx]# sbin&#x2F;nginx</span><br></pre></td></tr></table></figure>
-
-<p>效果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost nginx]# elinks http:&#x2F;&#x2F;admin.abc.com --dump</span><br><span class="line">   htmladmin</span><br><span class="line">[root@localhost nginx]# elinks http:&#x2F;&#x2F;service.abc.com --dump</span><br><span class="line">   htmlservice</span><br></pre></td></tr></table></figure>
-
-
-      
-         
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-
-  
-
-  </article>
-  
-  
-  
-
-        
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -506,10 +206,9 @@
       <meta itemprop="name" content="Nicholas--Altshuler">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/20191216a1.html" class="post-title-link" itemprop="url">nginx之旅第一篇：nginx下载安装、nginx配置文件详解、nginx默认网站</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          nginx之旅第一篇：nginx下载安装、nginx配置文件详解、nginx默认网站
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -583,7 +282,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="一、nginx下载安装"><a href="#一、nginx下载安装" class="headerlink" title="一、nginx下载安装"></a>一、nginx下载安装</h2><p>版本nginx 1.15.5</p>
+        <h2 id="一、nginx下载安装"><a href="#一、nginx下载安装" class="headerlink" title="一、nginx下载安装"></a>一、nginx下载安装</h2><p>版本nginx 1.15.5</p>
 <p>系统环境centos7.5（本机ip192.168.199.228）</p>
 <p>关闭selinux 和防火墙firewall</p>
 <h3 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h3><p>wget <a href="http://nginx.org/download/nginx-1.15.5.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.15.5.tar.gz</a> -P /usr/src</p>
@@ -777,15 +476,37 @@
 <p>参考链接</p>
 <p>[1]<a href="https://www.cnblogs.com/knowledgesea/p/5175711.html" target="_blank" rel="noopener">https://www.cnblogs.com/knowledgesea/p/5175711.html</a></p>
 
+        </div>
+        
+      <div>
       
+        
+      
+      </div>
          
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/nginx/"  rel="tag"><i class="fa fa-tag"></i> nginx</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/posts/20191217a2.html" rel="next" title="nginx之旅(第二篇):nginx日志管理、nginx防盗链、nginx虚拟主机">
+      nginx之旅(第二篇):nginx日志管理、nginx防盗链、nginx虚拟主机 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
 
   
 
@@ -796,12 +517,10 @@
 
   </div>
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -848,6 +567,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、nginx下载安装"><span class="nav-number">1.</span> <span class="nav-text">一、nginx下载安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、下载"><span class="nav-number">1.1.</span> <span class="nav-text">1、下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、安装"><span class="nav-number">1.2.</span> <span class="nav-text">2、安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、nginx的相关目录"><span class="nav-number">2.</span> <span class="nav-text">二、nginx的相关目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、nginx的启动与关闭、检查配置文件"><span class="nav-number">3.</span> <span class="nav-text">三、nginx的启动与关闭、检查配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、Nginx配置文件详解"><span class="nav-number">4.</span> <span class="nav-text">四、Nginx配置文件详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#location匹配规则补充"><span class="nav-number">4.1.</span> <span class="nav-text">location匹配规则补充</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、nginx的默认网站"><span class="nav-number">5.</span> <span class="nav-text">五、nginx的默认网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认网站设置"><span class="nav-number">5.1.</span> <span class="nav-text">默认网站设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx默认网站的访问控制"><span class="nav-number">5.2.</span> <span class="nav-text">nginx默认网站的访问控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用例1-：ip控制"><span class="nav-number">5.2.1.</span> <span class="nav-text">用例1 ：ip控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用例2：登录验证"><span class="nav-number">5.2.2.</span> <span class="nav-text">用例2：登录验证</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
